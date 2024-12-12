@@ -1,0 +1,13 @@
+model User {
+  id          String                @id @default(uuid())
+  username    String?
+  password    String
+  email       String                @unique
+  avatar      String                @default("https://icon-library.com/images/no-user-image-icon/no-user-image-icon-23.jpg")
+  createdAt   DateTime              @default(now())
+  updatedAt   DateTime              @updatedAt
+  crdb_region crdb_internal_region?
+  communities Community[]
+
+  @@map("users")
+}
