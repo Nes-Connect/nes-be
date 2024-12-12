@@ -1,0 +1,12 @@
+model Community {
+  id          String                @id @default(uuid())
+  ownerId     String
+  name        String?
+  icon        String                @default("https://icon-library.com/images/lion-595b40b75ba036ed117d858a.svg.svg")
+  createdAt   DateTime              @default(now())
+  updatedAt   DateTime              @updatedAt
+  crdb_region crdb_internal_region?
+  owner       User                  @relation(fields: [ownerId], references: [id])
+
+  @@map("communites")
+}
