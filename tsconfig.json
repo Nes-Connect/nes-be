@@ -1,26 +1,41 @@
 {
   "compilerOptions": {
+    // Module and Target Configuration
     "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
-    "sourceMap": true,
+    "target": "ES2022",
+
+    // Output Configuration
     "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
       "@modules/*": ["src/modules/*"]
     },
-    "incremental": true,
+
+    // Compatibility and Interoperability
+    "esModuleInterop": true,
     "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+
+    // Compilation Optimization
+    "isolatedModules": true,
+    "incremental": true,
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": true,
+
+    // Decorators and Metadata
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    // Strict Type-Checking Options
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
     "strictNullChecks": false,
     "noImplicitAny": true,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false,
-    "strict": true
+    "noFallthroughCasesInSwitch": false
   }
 }
